@@ -15,15 +15,21 @@
         <form method="GET" action="results.html">
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required><span class="required-field">*</span>
+
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required><span class="required-field">*</span>
+
+                <label for="Age">Please enter your age</label>
+                <input type="text" id="'age" name="age" maxlength="3" min="0" max="110" required><span class="required-field">*</span>
+                <h5>You must be 18 years or older to enter this giveaway</h5>
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required><span class="required-field">*</span>
+
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
@@ -86,7 +92,10 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="A five digit zip code">
+
+                    <label for="passwrd">Password:</label>
+                    <input type="password" id="passwrd" name="passwrd" pattern="[0-9A-Za-z]{6}" title="Enter in a 6 digit passcode" required>
                 </div>
             </fieldset>
 
